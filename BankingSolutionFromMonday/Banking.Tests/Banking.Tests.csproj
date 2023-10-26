@@ -26,12 +26,4 @@
     <ProjectReference Include="..\Banking.Domain\Banking.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <EditorConfigFiles Remove="C:\Users\ITUStudent\class\intro-to-programming-oct-2023\BankingSolution\Banking.Tests\.editorconfig" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="C:\Users\ITUStudent\class\intro-to-programming-oct-2023\BankingSolution\Banking.Tests\.editorconfig" />
-  </ItemGroup>
-
 </Project>

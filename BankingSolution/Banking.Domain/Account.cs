@@ -1,19 +1,25 @@
-﻿namespace Banking.Tests;
-public class NewAccounts
+﻿namespace Banking.Domain;
+
+public class Account
 {
-    [Fact]
-    public void NewAccountsHaveCorrectOpeningBalance()
-    {
-        // Write The Code You Wish You Had
-        // Given- I have a new account
-        Account account = new Account();
+	private decimal _balance = 5000;
+	public void Deposit(decimal amountToDeposit)
+	{
+		_balance += amountToDeposit;
+	}
 
-        // when I ask it for it's balance
-        decimal openingBalance = account.GetBalance();
+	public decimal GetBalance()
+	{
+		// look it up the database
+		return _balance;
+	}
 
-
-        // then it is 5000 bucks. (decimal)
-        Assert.Equal(5000M, openingBalance);
-
-    }
+	public void Withdraw(decimal amountToWithdraw)
+	{
+		if (amountToWithdraw > _balance)
+		{
+			return;
+		}
+		_balance -= amountToWithdraw;
+	}
 }

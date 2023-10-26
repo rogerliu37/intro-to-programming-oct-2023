@@ -1,7 +1,10 @@
 ﻿namespace LinkedOut;
 
-// events
+// Events
+
 public record UserCreatedLink();
 
-// commands
-public record CreatedUserLink()
+// Commands
+
+public record CreateUserLink();
+
